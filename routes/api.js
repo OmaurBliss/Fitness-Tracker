@@ -1,6 +1,14 @@
-
 const db = require("../models");
 const router = require("express").Router();
+
+//commnet in to prepopulate database
+// db.Workout.find({}).then(function (res) {
+//     console.log("Checking if db is populated");
+//     if (res.length === 0) {
+//         console.log("DB is empty");
+//         require("./seeders/seed.js");
+//     }
+// });
 
 //get workouts
 router.get("/api/workouts", (req, res) => {
