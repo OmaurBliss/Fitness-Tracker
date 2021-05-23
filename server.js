@@ -3,12 +3,12 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 require("dotenv").config()
 
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.YOUR_PORT || process.env.PORT || 3003;
 
 const app = express();
 
 app.use(logger("dev"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));S
 app.use(express.json());
 app.use(express.static("public"));
 console.log(process.env.MONGODB_URI )
